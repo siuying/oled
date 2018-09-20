@@ -1,6 +1,2 @@
-GOARCH=arm
-GOARM=6
-GOOS=linux
-
 build: 
-	go build -o oled
+	GOARCH=arm GOARM=6 GOOS=linux go build -o ./bin/oled
