@@ -20,3 +20,12 @@ sudo oled ./start.ttf "Adafruit" "PiOLED" "128x32" "For RaspberryPi"
 Try `stats.sh` for a more useful example:
 
 ![Preview](./img/preview2.JPG)
+
+## Reference
+
+- [Adafruit Python SSD1306](https://github.com/adafruit/Adafruit_Python_SSD1306)
+- [mikegleasonjr/devices/ssd1306](https://github.com/mikegleasonjr/devices/tree/master/ssd1306)
+
+## Copying
+
+MIT license
