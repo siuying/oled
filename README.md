@@ -16,3 +16,7 @@ sudo oled ./start.ttf "Adafruit" "PiOLED" "128x32" "For RaspberryPi"
 ```
 
 ![Preview](./img/preview.JPG)
+
+Try `stats.sh` for a more useful example:
+
+![Preview](./img/preview2.JPG)
