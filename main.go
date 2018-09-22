@@ -39,25 +39,25 @@ func main() {
 	}
 	defer b.Close()
 
+	// initialize ssd1306
 	opts := ssd1306.Opts{
 		W:          128,
 		H:          32,
 		Sequential: true,
 	}
-
 	dev, err := ssd1306.NewI2C(b, &opts)
 	if err != nil {
 		log.Fatalf("failed to initialize ssd1306: %v", err)
 		return
 	}
 
+	// Draw message to device
 	top := 8.0
 	ctx := gg.NewContext(dev.Bounds().Dx(), dev.Bounds().Dy())
 	if err := ctx.LoadFontFace(fontPath, 8); err != nil {
 		log.Fatalf("error loading font: %v", err)
+		return
 	}
-	ctx.SetRGB(0, 0, 0)
-	ctx.Clear()
 	ctx.SetRGB(1, 1, 1)
 	ctx.DrawString(line1, 0, top)
 	ctx.DrawString(line2, 0, top+8)
